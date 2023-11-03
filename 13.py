@@ -69,7 +69,7 @@ def query_google(faq):
 
 
 def summarize_doc(google_doc):
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-16k")
+    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo-16k", openai_api_key=openai_api_key)
     chain = load_summarize_chain(llm, chain_type="stuff")
     with st.spinner('DemoGPT is working on it. It might take 5-10 seconds...'):
         return chain.run(google_doc)
