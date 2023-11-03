@@ -203,4 +203,4 @@ with st.form(key="form"):
             seo_optimized_article = ""
 
         if seo_optimized_article is not None and len(str(seo_optimized_article)) > 0:
-            st.text(seo_optimized_article)
+            st.markdown(seo_optimized_article)
